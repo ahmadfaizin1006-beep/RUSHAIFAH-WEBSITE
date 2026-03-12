@@ -1,0 +1,387 @@
+:root {
+    --bg: #0d1321;
+    --surface: rgba(16, 24, 40, 0.95);
+    --surface-soft: rgba(15, 23, 42, 0.75);
+    --text: #e2e8f0;
+    --text-subtle: #94a3b8;
+    --accent: #38bdf8;
+    --accent-strong: #0ea5e9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    background-color: var(--surface);
+    min-height: 100vh;
+    width: 100%;
+}
+
+.navbar {
+        background-color: var(--surface-soft);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(98, 138, 199, 0.2);
+}
+
+.logo {
+    color: var(--accent);
+    font-weight: 70;
+    font-size: 1.3rem;
+    letter-spacing: 0.08em;
+    padding-left: 10px ;
+    height: 9vh;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navbar li {
+    display: inline-flex;
+}
+
+.navbar a {
+    color: var(--text);
+    text-decoration: none;
+    background-color: rgba(148, 163, 184, 0.1);
+    padding: 0.55rem 0.9rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.navbar a:hover {
+    background-color: var(--accent-soft, rgba(56, 189, 248, 0.2));
+    color: var(--accent);
+}
+
+.wellcome {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    color: var(--accent);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.wellcome span {
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: var(--text-subtle);
+}
+
+.content {
+    background-color: rgba(15, 23, 42, 0.85);
+    height: 80%;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.content-image {
+    width: 43vh;
+    height: 65vh;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.55);
+    align-items: center;
+}
+
+.footer {
+    margin-top: 2vh;
+    background-color: var(--surface-soft);
+    color: var(--text-subtle);
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.qoutes {
+    text-decoration: overline;
+    margin-top: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center; 
+}
+
+.footer-container .logo {
+    height: 5vh;
+    width: auto;
+}
+
+.copy {
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.title {
+    margin-left: 3vh;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+    background-color: rgba(56, 189, 248, 0.2);
+    padding: 0.5rem;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.text {
+    margin-right: 3vh;
+    margin-left: 3vh;
+    text-justify: center;
+    text-align: justify;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+title-list {
+    margin-left: 3vh;
+}
+
+.list {
+    list-style: none;
+    text-align: center;
+    margin-left: 3vh;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.guru-list-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin: 1rem 0 2rem 3vh;
+}
+
+.guru {
+    width: 45vh;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.4);
+}
+
+.guru-list {
+    list-style: disc;
+    margin: 0;
+    padding-left: 1.2rem;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin-top: 2rem;
+}
+
+.guru-list li {
+    margin-bottom: 0.6rem;
+}
+
+.title-album {
+    background-color: var(--accent);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    width: auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.muwadaah-photos {
+    height: fit-content;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the slideshow images by default (no large image above thumbnail rows) */
+.mySlides {
+  display: none !important;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: var(--surface-soft);
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* Lightbox overlay styles */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.86);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox-image {
+  max-width: 95%;
+  max-height: 92%;
+  border-radius: 8px;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.contact {
+    background-color: var(--surface-soft);
+    padding: 2rem;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.info {
+    font-size: 2rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.list-title {
+    margin-right: 3vh;
+    margin-left: 3vh;
+    text-justify: center;
+    text-align: justify;
+    font-size: 3rem;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--accent); 
+}
+
+.guru {
+    background-color: var(--accent);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 3vh;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    width: 110vh;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
